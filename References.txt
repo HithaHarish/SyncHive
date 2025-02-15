@@ -1,9 +1,9 @@
 Color Codes:
   Light Mode: 
-    #F5EFFF
-    #E5D9F2
-    #CDC1FF
-    #A294F9
+    61F2F5
+    FFFFFF
+    E0E0E0
+    723881
   Dark Mode:
     #180161
     #4F1787
