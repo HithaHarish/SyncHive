@@ -1,0 +1,90 @@
+body{
+    background-color: #ffffff;}
+
+.dark-mode{
+    background-color:black;
+}
+#heading{
+    color:#173B45;
+    font-size:100px;
+    text-align: left;
+    padding-top:90px;
+    padding-left:150px;
+    font-family: "Passion One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 60px 0 0 0;
+}
+#subheading{
+    color:#FF8225;
+    font-size:27px;
+    text-align: left;
+    padding-left:150px;
+    font-family: "Dosis", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+#signupmain{
+    justify-self: center;
+    align-self: center;
+    margin-top:60px;
+    display:flex;
+    flex-direction: column;
+    background-color: #E0E0E0;
+    width:90%;
+    height:450px;
+    padding: 0 10px 0 10px;
+    border: 8px black solid;
+}
+#signupheader{
+    font-family: "Passion One", sans-serif;
+    font-weight: 100;
+    font-size: 40px;
+    color:#100303;
+    text-align:center;
+}
+.row{
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: top;
+    font-size:20px;
+}
+.subrow{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:420px;
+    margin:0 auto;
+}
+.input{
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size:20px;
+    font-style: normal;
+    background-color: #ffffff;
+    color:rgb(0, 0, 0);
+    border:2px white solid;
+    height:25px;
+    width:250px;
+}
+.inputotp{
+    height:25px;
+    width:20px;
+    flex-direction: row;
+}
+button{
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size:18px;
+    font-style: normal;
+    width:100px;
+}
