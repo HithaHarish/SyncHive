@@ -4,16 +4,23 @@ function moveToNext(currentInput, nextInputId) {
             }
         }
 
+        function moveToNext(currentInput, nextInputId) {
+            if (currentInput.value.length === 1) {
+                document.getElementById(nextInputId)?.focus();
+            }
+        }
+        
         document.querySelector('.submit').addEventListener('click', function(event) {
             event.preventDefault();
         
-            let isValid = true;
             let firstName = document.getElementById('first-name');
             let lastName = document.getElementById('last-name');
             let email = document.getElementById('email');
             let phone = document.querySelector('[placeholder="Enter Phone Number"]');
             let qualification = document.getElementById('qualification');
             let university = document.getElementById('university');
+            let username = document.getElementById('username');
+            let password = document.getElementById('password');
             let linkedin = document.getElementById('linkedin');
             let github = document.getElementById('github');
             let otpEmail = [...document.querySelectorAll('.otp input')].slice(0, 4);
@@ -23,41 +30,59 @@ function moveToNext(currentInput, nextInputId) {
                 if (!field.value.trim().match(regex)) {
                     alert(message);
                     field.focus();
-                    isValid = false;
+                    return false; // Stops validation immediately
                 }
+                return true;
             }
         
-            validateField(firstName, /^[A-Za-z]+$/, 'Enter a valid first name.');
-            validateField(lastName, /^[A-Za-z]*$/, 'Enter a valid last name.');
-            validateField(email, /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'Enter a valid email.');
-            validateField(phone, /^[1-9]{1}[0-9]{9}/, 'Enter a valid 10-digit phone number.');
-            validateField(qualification, /^[A-Za-z ]+$/, 'Enter a valid qualification.');
-            validateField(university, /^[A-Za-z ]+$/, 'Enter a valid university name.');
-            
+            if (!validateField(firstName, /^[A-Za-z]+$/, 'Enter a valid first name.')) return;
+            if (!validateField(lastName, /^[A-Za-z]*$/, 'Enter a valid last name.')) return;
+            if (!validateField(email, /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/, 'Enter a valid email.')) return;
+            if (!validateField(phone, /^[1-9]{1}[0-9]{9}$/, 'Enter a valid 10-digit phone number.')) return;
+            if (!validateField(qualification, /^[A-Za-z ]+$/, 'Enter a valid qualification.')) return;
+            if (!validateField(university, /^[A-Za-z ]+$/, 'Enter a valid university name.')) return;
+            if (!validateField(username, /^[A-Za-z._0-9]+$/, 'Enter a valid username.')) return;
+            if (!validateField(password, /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{5,}$/, 
+                'Enter a password with at least 1 lowercase, 1 uppercase, 1 digit, 1 special character, and a minimum length of 5.')) return;
+        
             if (linkedin.value && !linkedin.value.match(/^https?:\/\/www\.linkedin\.com\/.*$/)) {
                 alert('Enter a valid LinkedIn URL.');
                 linkedin.focus();
-                isValid = false;
+                return;
             }
         
             if (github.value && !github.value.match(/^https?:\/\/github\.com\/.*$/)) {
                 alert('Enter a valid GitHub URL.');
                 github.focus();
-                isValid = false;
+                return;
             }
         
             if (otpEmail.some(input => input.value.trim() === '')) {
                 alert('Enter the full OTP for email verification.');
-                isValid = false;
+                return;
             }
         
             if (otpPhone.some(input => input.value.trim() === '')) {
                 alert('Enter the full OTP for phone verification.');
-                isValid = false;
+                return;
             }
         
-            if (isValid) {
-                alert('Form submitted successfully!');
-                document.getElementById('signup_container').submit(); // Submit form
+            alert('Form submitted successfully!');
+            document.getElementById('signup_container').submit();
+        });
+        
+
+document.getElementById('togglePassword').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            const icon = this;
+            
+            if (passwordField.type === 'password') {
+                passwordField.type = 'text';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            } else {
+                passwordField.type = 'password';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
             }
         });
