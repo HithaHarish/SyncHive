@@ -1,9 +1,37 @@
+/* Default Body */
 body{
     background-color: #ffffff;}
 
+/* Dark Mode Body */
 .dark-mode{
     background-color:black;
 }
+
+button{
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size:18px;
+    font-style: normal;
+    width:100px;
+    border:2px white solid;
+    color:white;
+    border-radius:20px;
+    background-color: #723881;
+    height:32px;
+}
+
+button:hover{
+    background-color: #16d5ee;
+}
+
+button:active{
+    background-color: #723881;
+}
+
+/* Index.html */
+
+/* Main Heading - SYNC HIVE */
 #heading{
     color:#173B45;
     font-size:100px;
@@ -15,6 +43,8 @@ body{
     font-style: normal;
     margin: 60px 0 0 0;
 }
+
+/* Sub Heading - caption below SYNC HIVE */
 #subheading{
     color:#FF8225;
     font-size:27px;
@@ -25,25 +55,33 @@ body{
     font-weight: 500;
     font-style: normal;
 }
-#signupmain{
+
+/* Signup.html */
+
+/* Container*/
+#signup_container{
     justify-self: center;
     align-self: center;
     margin-top:60px;
     display:flex;
     flex-direction: column;
     background-color: #E0E0E0;
-    width:90%;
+    width:80%;
     height:450px;
     padding: 0 10px 0 10px;
-    border: 8px black solid;
+    border: 8px #723881 solid;
 }
-#signupheader{
+
+/*SIGN UP*/
+#signup_header{
     font-family: "Passion One", sans-serif;
     font-weight: 100;
     font-size: 40px;
-    color:#100303;
+    color:black;
     text-align:center;
 }
+
+/*Rows to Input Details*/
 .row{
     font-family: "Markazi Text", serif;
     font-optical-sizing: auto;
@@ -55,36 +93,59 @@ body{
     align-items: top;
     font-size:20px;
 }
+
+/* Sub rows of input details */
 .subrow{
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width:420px;
-    margin:0 auto;
+    width:450px;
+    margin:10px auto;
 }
-.input{
+
+/* Input Fields */
+.input {
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid white;
+    height: 25px;
+    width: 250px;
+    padding:0px auto;
+}
+/* Placeholders */
+.input input {
+    margin: 0 auto;
+    width: 241px;
+    height: 20px;
+}
+
+/*Input OTP*/
+.input_otp{
     font-family: "Markazi Text", serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-size:20px;
-    font-style: normal;
-    background-color: #ffffff;
-    color:rgb(0, 0, 0);
-    border:2px white solid;
-    height:25px;
-    width:250px;
-}
-.inputotp{
     height:25px;
     width:20px;
     flex-direction: row;
+    text-align: center;
 }
-button{
-    font-family: "Markazi Text", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-size:18px;
-    font-style: normal;
-    width:100px;
+
+.submit{
+    margin-top:25px;
+    text-align: center;
+    font-size: 25px;
+    padding:5px;
+    height:45px;
+    width:130px;
+    justify-self: center;
+    align-self: center;
 }
+
+
