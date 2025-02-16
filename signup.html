@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SyncHive</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +59,20 @@
                 </div>
                 <button type="button">Verify OTP</button>
             </div>
+        </div>
+
+        <div class="row">
+            <div class="subrow">
+                <label for="username">Create Username:</label>
+                <div class="input"><input type="text" class="input" id="username" required pattern ="[A-Za-z_]+" placeholder="Enter Username"></div>
+            </div>
+            <div class="subrow">
+                <label for="password">Create Password:</label>
+                <div class="input-wrapper">
+                    <input type="password" class="input" id="password" required placeholder="Enter Password">
+                    <i class="fa fa-eye-slash toggle-password" id="togglePassword" style="margin-left:20px;"></i>
+                </div>
+            </div>            
         </div>
 
         <div class="row">
