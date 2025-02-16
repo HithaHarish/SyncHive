@@ -67,7 +67,7 @@ button:active{
     flex-direction: column;
     background-color: #E0E0E0;
     width:80%;
-    height:450px;
+    height:500px;
     padding: 0 10px 0 10px;
     border: 8px #723881 solid;
 }
@@ -104,6 +104,10 @@ button:active{
     margin:10px auto;
 }
 
+#password{
+    width:200px !important;
+}
+
 /* Input Fields */
 .input {
     font-family: "Markazi Text", serif;
@@ -117,12 +121,22 @@ button:active{
     height: 25px;
     width: 250px;
     padding:0px auto;
+    justify-self: left;
 }
+
 /* Placeholders */
 .input input {
     margin: 0 auto;
     width: 241px;
     height: 20px;
+}
+
+/* Input Wrapper */
+.input-wrapper {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 /*Input OTP*/
@@ -146,6 +160,20 @@ button:active{
     width:130px;
     justify-self: center;
     align-self: center;
+}
+
+/* Login.html */
+#login_container{
+    justify-self: center;
+    align-self: center;
+    margin-top:60px;
+    display:flex;
+    flex-direction: column;
+    background-color: #E0E0E0;
+    width:45%;
+    height:450px;
+    padding: 0 10px 0 10px;
+    border: 8px #723881 solid;
 }
 
 
