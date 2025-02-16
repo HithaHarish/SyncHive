@@ -1,58 +1,88 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
-<html>
-    <head>
-
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Cookie&family=DM+Serif+Display:ital@0;1&family=Fredoka:wght@300..700&family=Gravitas+One&family=League+Spartan:wght@100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Saira+Stencil+One&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
-        
-        <title>SyncHive</title>
-    </head>
-</html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyncHive</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=DM+Serif+Display:ital@0;1&family=Fredoka:wght@300..700&family=Gravitas+One&family=League+Spartan:wght@100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Saira+Stencil+One&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
+</head>
 <body>
-    <div id="signupmain">
-        <h1 id="signupheader">SIGN UP</h1>
+    <div id="signup_container">
+        <h1 id="signup_header">SIGN UP</h1>
+
         <div class="row">
             <div class="subrow">
-                <h3>First Name:</h3>
-                <div class="inputname">
-                    <input type="text" class="input">
-                </div>
+                <label for="first-name">First Name:</label>
+                <div class="input"><input type="text" class="input" id="first-name" required pattern ="[A-Za-z]+" placeholder="Enter First name"></div>
             </div>
             <div class="subrow">
-                <h3>Last Name:</h3>
-                <div class="inputname">
-                    <input type="text" class="input">
-                </div>
+                <label for="last-name">Last Name:</label>
+                <div class="input"><input type="text" class="input" id="last-name" pattern ="[A-Za-z]+" placeholder="Enter Last name"></div>
             </div>
         </div>
+
         <div class="row">
             <div class="subrow">
-                <h3>Email:</h3>
-                <div class="inputname">
-                    <input type="text" class="input">
-                </div>
+                <label for="email">Email:</label>
+                <div class="input"><input type="email" id="email" class="input" required placeholder="Enter Email"></div>
             </div>
             <div class="subrow">
-                <button>Send OTP</button>
+                <button type="button">Send OTP</button>
                 <div class="otp">
-                <div>
-                    <input type="text" class="inputotp">
+                    <input type="text" id="otp1" class="input_otp" maxlength="1" required oninput="moveToNext(this, 'otp2')">
+                    <input type="text" id="otp2" class="input_otp" maxlength="1" required oninput="moveToNext(this, 'otp3')">
+                    <input type="text" id="otp3" class="input_otp" maxlength="1" required oninput="moveToNext(this, 'otp4')">
+                    <input type="text" id="otp4" class="input_otp" maxlength="1" required>
                 </div>
-                <div>
-                    <input type="text" class="inputotp">
-                </div>
-                <div>
-                    <input type="text" class="inputotp">
-                </div>
-                <div>
-                    <input type="text" class="inputotp">
-                </div>
-            </div>
-                <button>Verify OTP</button>
+                <button type="button">Verify OTP</button>
             </div>
         </div>
+
+        <div class="row">
+            <div class="subrow">
+                <label for="phone-no">Phone Number:</label>
+                <input type="text" minlength="10" class="input" maxlength="10" pattern="[1-9]{1}[0-9]{9}" required placeholder="Enter Phone Number">
+            </div>
+            <div class="subrow">
+                <button type="button">Send OTP</button>
+                <div class="otp">
+                    <input type="text" id="otp5" class="input_otp" maxlength="1" required oninput="moveToNext(this, 'otp6')">
+                    <input type="text" id="otp6" class="input_otp" maxlength="1" required oninput="moveToNext(this, 'otp7')">
+                    <input type="text" id="otp7" class="input_otp" maxlength="1" required oninput="moveToNext(this, 'otp8')">
+                    <input type="text" id="otp8" class="input_otp" maxlength="1" required>
+                </div>
+                <button type="button">Verify OTP</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="subrow">
+                <label for="qualification">Highest Qualification:</label>
+                <div class="input"><input type="text" class="input" id="qualification" required pattern ="[A-Za-z]+" placeholder="Enter highest qualification"></div>
+            </div>
+            <div class="subrow">
+                <label for="univeristy">University:</label>
+                <div class="input"><input type="text" class="input" id="university" required pattern ="[A-Za-z]+" placeholder="Enter University"></div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="subrow">
+                <label for="linkedin">Linkedin url:</label>
+                <div class="input"><input type="url" class="input" id="linkedin" placeholder="Enter Linkedin url"></div>
+            </div>
+            <div class="subrow">
+                <label for="github">GitHub url:</label>
+                <div class="input"><input type="url" class="input" id="github" placeholder="Enter GitHub url"></div>
+            </div>
+        </div>
+        <button class="submit">SUBMIT</button>
     </div>
+    <script src="script.js"></script>
 </body>
+</html>
