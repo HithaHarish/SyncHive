@@ -1,22 +1,59 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="styles.css">
-        <title>SyncHive</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>SyncHive - Login</title>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=DM+Serif+Display:ital@0;1&family=Fredoka:wght@300..700&family=Gravitas+One&family=League+Spartan:wght@100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Saira+Stencil+One&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div id="login_container">
-            <h1 id="signup_header">LOGIN</h1>
+    <!-- Font Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SyncHive Title on Top Left -->
+    <div id="syncHiveTitle">
+        <span>SyncHive</span>
+    </div>
+
+    <div id="login_container">
+        <h1 id="signup_header">LOGIN</h1>
+
+        <!-- Login Form -->
         <div id="sub_login_container">
-            
+            <!-- Email Field -->
+            <div class="subrow">
+                <label for="email">Username:</label>
+                <input type="email" id="email" class="input" placeholder="Enter Email" required>
+            </div>
+
+            <!-- Password Field -->
+            <div class="subrow">
+                <label for="password">Password:</label>
+                <input type="password" id="password" class="input" placeholder="Enter Password" required>
+            </div>
+
+            <!-- Forgot Password Link -->
+            <div class="forgot-password">
+                <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+            </div>
+
+            <!-- Login Button -->
+            <button class="submit" id="loginBtn">LOGIN</button>
+
+            <!-- Sign-up Prompt -->
+            <div class="signup-prompt">
+                <span>Don't have an account? <a href="#">Sign up</a></span>
+            </div>
+
+            <!-- Google Login Button (for illustration) -->
+            <div class="google-login">
+                <button class="submit google-btn">Continue with Google</button>
+            </div>
         </div>
-    </body>
+    </div>
+
     <script src="script.js"></script>
+</body>
 </html>
