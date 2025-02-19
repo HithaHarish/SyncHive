@@ -1,0 +1,123 @@
+/* Default Body */
+body {
+    background-color: #D9C8E2;
+    color: #333;
+    font-family: "Markazi Text", serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative; /* So we can place SyncHive at the top-left */
+}
+
+/* SyncHive Title Style (Top-left corner) */
+#syncHiveTitle {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: "Markazi Text", serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: #723881; /* Same color as the border */
+}
+
+/* Login Container Style */
+#login_container {
+    background-color: #E0E0E0;
+    width: 380px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 8px solid #723881; /* Same border as signup box */
+}
+
+/* Login Heading */
+#signup_header {
+    font-family: "Passion One", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    color: #4f4f4f;
+    margin-bottom: 30px;
+}
+
+/* Input Fields */
+.input {
+    font-family: "Markazi Text", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 20px;
+    font-style: normal;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid #723881; /* Matching the border color */
+    height: 35px;
+    width: 250px;
+    padding-left: 10px;
+    margin: 10px 0;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    text-align: left;
+    margin-top: 10px;
+}
+
+.forgot-password a {
+    font-size: 18px;
+    color: #723881;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Login Button */
+.submit {
+    background-color: #723881;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.submit:hover {
+    background-color: #16d5ee;
+}
+
+/* Google Button */
+.google-btn {
+    background-color: #db4437;
+    color: white;
+    margin-top: 20px;
+}
+
+.google-btn:hover {
+    background-color: #e57373;
+}
+
+/* Sign Up Prompt with Border */
+.signup-prompt {
+    margin-top: 25px;
+    font-size: 18px; /* Increased size */
+    padding: 15px;
+    border: 2px solid #723881;
+    border-radius: 8px;
+    color: #723881;
+}
+
+.signup-prompt a {
+    color: #723881;
+    text-decoration: none;
+}
+
+.signup-prompt a:hover {
+    text-decoration: underline;
+}
