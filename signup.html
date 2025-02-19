@@ -4,26 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SyncHive</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <link rel="stylesheet" href="sign_up.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Markazi+Text:wght@400..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cookie&family=DM+Serif+Display:ital@0;1&family=Fredoka:wght@300..700&family=Gravitas+One&family=League+Spartan:wght@100..900&family=Orbitron:wght@400..900&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Saira+Stencil+One&family=Signika+Negative:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- SyncHive label at the top right -->
+    <div id="syncHiveLabel">SyncHive</div>
+
     <div id="signup_container">
         <h1 id="signup_header">SIGN UP</h1>
 
         <div class="row">
             <div class="subrow">
                 <label for="first-name">First Name:</label>
-                <div class="input"><input type="text" class="input" id="first-name" required pattern ="[A-Za-z]+" placeholder="Enter First name"></div>
+                <div class="input"><input type="text" class="input" id="first-name" required pattern="[A-Za-z]+" placeholder="Enter First name"></div>
             </div>
             <div class="subrow">
                 <label for="last-name">Last Name:</label>
-                <div class="input"><input type="text" class="input" id="last-name" pattern ="[A-Za-z]+" placeholder="Enter Last name"></div>
+                <div class="input"><input type="text" class="input" id="last-name" required pattern="[A-Za-z]+" placeholder="Enter Last name"></div>
             </div>
         </div>
 
@@ -63,41 +64,28 @@
 
         <div class="row">
             <div class="subrow">
-                <label for="username">Create Username:</label>
-                <div class="input"><input type="text" class="input" id="username" required pattern ="[A-Za-z_]+" placeholder="Enter Username"></div>
-            </div>
-            <div class="subrow">
-                <label for="password">Create Password:</label>
-                <div class="input-wrapper">
-                    <input type="password" class="input" id="password" required placeholder="Enter Password">
-                    <i class="fa fa-eye-slash toggle-password" id="togglePassword" style="margin-left:20px;"></i>
-                </div>
-            </div>            
-        </div>
-
-        <div class="row">
-            <div class="subrow">
                 <label for="qualification">Highest Qualification:</label>
-                <div class="input"><input type="text" class="input" id="qualification" required pattern ="[A-Za-z]+" placeholder="Enter highest qualification"></div>
+                <div class="input"><input type="text" class="input" id="qualification" required pattern="[A-Za-z ]+" placeholder="Enter highest qualification"></div>
             </div>
             <div class="subrow">
                 <label for="univeristy">University:</label>
-                <div class="input"><input type="text" class="input" id="university" required pattern ="[A-Za-z]+" placeholder="Enter University"></div>
+                <div class="input"><input type="text" class="input" id="university" required pattern="[A-Za-z ]+" placeholder="Enter University"></div>
             </div>
         </div>
 
         <div class="row">
             <div class="subrow">
-                <label for="linkedin">Linkedin url:</label>
-                <div class="input"><input type="url" class="input" id="linkedin" placeholder="Enter Linkedin url"></div>
+                <label for="linkedin">Linkedin URL:</label>
+                <div class="input"><input type="url" class="input" id="linkedin" placeholder="Enter Linkedin URL"></div>
             </div>
             <div class="subrow">
-                <label for="github">GitHub url:</label>
-                <div class="input"><input type="url" class="input" id="github" placeholder="Enter GitHub url"></div>
+                <label for="github">GitHub URL:</label>
+                <div class="input"><input type="url" class="input" id="github" placeholder="Enter GitHub URL"></div>
             </div>
         </div>
         <button class="submit">SUBMIT</button>
     </div>
-    <script src="script.js"></script>
+
+    <script src="sign_up.js"></script>
 </body>
 </html>
